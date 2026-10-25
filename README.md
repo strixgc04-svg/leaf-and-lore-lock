@@ -26,6 +26,8 @@ Edit `lock.json` on GitHub (pencil icon), change `locked`, and commit. Shoppers 
 ## Good to know
 
 - The theme code lives in `snippets/ll-store-lock.liquid` and is rendered from `layout/theme.liquid`.
-- If GitHub can't be reached or the file is invalid, the store stays **open** (fails safe for shoppers).
+- If GitHub can't be reached or the file is invalid, each browser keeps its last known state: open on a first
+  visit, still locked for someone who already saw the lock screen.
+- The theme editor is never locked, so the store can still be edited.
 - It's a storefront overlay, not access control: checkout links, the Shopify admin and APIs are not affected.
 - This repo must stay **public** so shoppers' browsers can read `lock.json`. Keep nothing secret here.
